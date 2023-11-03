@@ -1,25 +1,26 @@
-import logo from './logo.svg';
+import React from "react";
 import './App.css';
+import { Route } from 'react-router-dom'
+import HomePage from './Pages/HomePage';
+import ChatPage from './Pages/ChatPage';
+import { useEffect, useState } from 'react';
+import axios from 'axios'
 
 function App() {
+  let [chats, setChats] = useState();
+
+  const fetchChats = async () => {
+    const chats = await axios.get("")
+  }
+  useEffect(() => {
+
+  }, [])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Route path="/" component={HomePage}></Route>
+      <Route path="/chats" component={ChatPage}></Route>
     </div>
   );
 }
-
 export default App;
