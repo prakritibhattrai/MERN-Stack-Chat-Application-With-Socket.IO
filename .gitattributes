@@ -1,0 +1,6 @@
+# Set the default behavior to LF (Unix-style line endings)
+* text=auto
+
+# Explicitly specify files to be handled as binary (e.g., images)
+*.jpg binary
+*.png binary
